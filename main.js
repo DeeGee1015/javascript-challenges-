@@ -20,27 +20,14 @@ for (var i=1; i <= 100; i++)
 }
 
 
-
-function pigLatin(word){
-
-  let vowels = ["a", "e", "i", "o", "u"];
-  let newWord = "";
-
-  for(let i=0; i<word.length; i++){
-    for(let j=0; j<vowels.length; j++){
-
-    if(word[i] != vowels[j]){
-
-      console.log(vowels[j]);
-    }
-      {
-    }
-
-
-    }
+let vowels = ['a', 'e', 'i', 'o', 'u']
+function pigLatin(string) {
+  str = prompt("Enter a word or a phrase")
+  let a = str.substr(1)
+  let b = str.charat(0)
+  if(!(vowels.includes(b))){
+    return a + b + "ay"
+  } else{
+    return str + "ay"
   }
-
-  return newWord;
 }
-
-pigLatin("banana");
